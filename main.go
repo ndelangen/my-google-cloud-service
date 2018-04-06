@@ -1,22 +1,16 @@
-package main
+package hello
 
 import (
 	"fmt"
 	"net/http"
-
-	"google.golang.org/appengine"
 )
 
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/" {
-		http.Redirect(w, r, "/", http.StatusFound)
-		return
-	}
-
-	fmt.Fprintln(w, "Hello, Gopher Network!")
+// init is run before the application starts serving.
+func init() {
+	// Handle all requests with path /hello with the helloHandler function.
+	http.HandleFunc("/", helloHandler)
 }
 
-func main() {
-	http.HandleFunc("/", indexHandler)
-	appengine.Main()
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Hello from the Go app")
 }
