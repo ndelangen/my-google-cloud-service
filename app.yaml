@@ -1,8 +1,6 @@
 runtime: go
 api_version: go1
 
-runtime: python27
-api_version: 1
 threadsafe: true
 
 # default cache expiration is 10 min
