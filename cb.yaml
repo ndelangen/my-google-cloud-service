@@ -8,3 +8,4 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '--quiet']
   dir: 'backend'
+timeout: 1200s
