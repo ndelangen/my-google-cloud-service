@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '--quiet']
+  dir: 'backend'
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '--quiet']
+  dir: 'frontend'
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '--quiet', 'dispatch.yml']
+  dir: 'frontend'
