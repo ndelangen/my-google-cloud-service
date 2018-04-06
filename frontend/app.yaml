@@ -1,5 +1,5 @@
 runtime: python27
-service: frontend
+service: default
 
 threadsafe: true
 
