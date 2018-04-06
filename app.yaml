@@ -8,6 +8,7 @@ default_expiration: "5m"
 handlers:
 - url: /
   static_files: index.html
+  expiration: "1s"
   upload: index.html
   secure: always
   redirect_http_response_code: 301
