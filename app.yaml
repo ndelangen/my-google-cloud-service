@@ -1,3 +1,6 @@
+runtime: go
+api_version: go1
+
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -16,3 +19,5 @@ handlers:
   static_dir: static
   secure: always
   redirect_http_response_code: 301
+- url: /.*
+  script: _go_app
