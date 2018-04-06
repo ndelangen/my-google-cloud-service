@@ -17,7 +17,6 @@ handlers:
   redirect_http_response_code: 301
 - url: /.*
   script: _go_app
-  expiration: "1s"
 
 automatic_scaling:
   min_num_instances: 1
