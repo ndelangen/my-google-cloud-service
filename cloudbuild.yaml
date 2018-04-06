@@ -1,9 +1,3 @@
 steps:
-- name: 'gcr.io/cloud-builders/go'
-  args: ['install', '.']
-  env: ['PROJECT_ROOT=hello']
-- name: 'gcr.io/cloud-builders/go'
-  args: ['build', 'hello']
-  env: ['PROJECT_ROOT=hello']
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['-m', 'cp', 'hello', 'gs://[BUCKET_NAME]/']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '--quiet']
