@@ -1,7 +1,5 @@
 runtime: go
-api_version: go1
-
-threadsafe: true
+env: flex
 
 # default cache expiration is 10 min
 default_expiration: "5m"
@@ -19,3 +17,13 @@ handlers:
   redirect_http_response_code: 301
 - url: /.*
   script: _go_app
+  expiration: "1s"
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+
+resources:
+  cpu: 1
+  memory_gb: 1
+  disk_size_gb: 10
