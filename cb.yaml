@@ -7,5 +7,6 @@ steps:
   dir: 'frontend'
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '--quiet']
+  env: ['GOPATH=.']
   dir: 'backend'
 timeout: 1200s
