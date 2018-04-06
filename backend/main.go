@@ -4,15 +4,17 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"github.com/go-chi/chi"
 )
 
-// init is run before the application starts serving.
 func main() {
-	// Handle all requests with path /hello with the helloHandler function.
-	http.HandleFunc("/", helloHandler)
+	r := chi.NewRouter()
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("welcome"))
+	})
 
 	log.Print("Listening on port 8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
