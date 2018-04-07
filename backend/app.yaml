@@ -1,8 +1,7 @@
-runtime: go
+runtime: nodejs
 env: flex
 service: backend
 
-# default cache expiration is 10 min
 default_expiration: "5m"
 
 automatic_scaling:

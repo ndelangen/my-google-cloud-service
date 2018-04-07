@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "license": "ISC",
+  "description": "backend for my-google-cloud-service",
+  "repository": "https://github.com/ndelangen/my-google-cloud-service",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^1.4.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
