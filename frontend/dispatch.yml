@@ -1,3 +1,5 @@
 dispatch:
   - url: "*/api/*"
     service: backend
+  - url: "*/api2/*"
+      service: gobackend
